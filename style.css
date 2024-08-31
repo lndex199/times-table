@@ -1,0 +1,139 @@
+body {
+  width: 430px;
+  font-family: sans-serif;
+  margin-inline: auto;
+}
+
+h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  & div {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    & :nth-child(1 of span) {
+      color: blue;
+    }
+
+    & small {
+      font-size: 14px;
+    }
+  }
+}
+
+main {
+  padding-left: 10px;
+}
+
+.instruction {
+  padding-left: 8px;
+}
+
+.section-1 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-items: center;
+  margin-top: 20px;
+}
+
+select {
+  all: unset;
+  width: 30px;
+  height: 280px;
+  text-align: center;
+  outline: none;
+}
+
+option {
+  border: 1px solid #ccc;
+}
+
+option:checked {
+  background-color: #ffdead;
+  color: #000;
+}
+
+.question {
+  font-size: 40px;
+  margin: 0;
+}
+
+.section-2 {
+  margin-top: 40px;
+}
+
+.answer-form {
+  display: flex;
+}
+
+form label {
+  width: 70px;
+  align-self: center;
+  text-align: center;
+}
+
+.answer-input {
+  width: 150px;
+  color: red;
+  font-weight: 700;
+  font-size: 34px;
+  text-align: center;
+  border-right: none;
+  border-radius: 10px 0 0 10px;
+  outline: none;
+}
+
+form button,
+.reset-btn,
+.skip-btn {
+  background: #000;
+  color: white;
+  font-size: 15px;
+  border: none;
+  border-radius: 0 10px 10px 0;
+  outline: none;
+  padding: 10px 20px;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  font-size: 20px;
+  padding-left: 8px;
+  margin-top: 30px;
+}
+
+.score {
+  color: blue;
+  font-weight: 700;
+}
+
+.mistakes {
+  color: red;
+  font-weight: 700;
+}
+
+.reset-btn,
+.skip-btn {
+  border-radius: 10px;
+}
+
+.animate-wrong {
+  animation: show-error .5s;
+}
+
+@keyframes show-error {
+  50% {
+    color: red;
+    scale: 1.2;
+  }
+
+  100% {
+    color: #333;
+    scale: 1;
+  }
+}

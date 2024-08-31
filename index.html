@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Times Table</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+</head>
+
+<body>
+  <h2>
+    <img src="./logo.png" width="100" alt="School Logo">
+    <div>
+      <span>Trinity Beach State School</span>
+      <span>Times Table App
+        <small>&copy; <em>Leon Newn 2024</em></small>
+      </span>
+    </div>
+  </h2>
+
+  <main>
+    <div class="instruction">
+      <p>Generate random questions based on the numbers you selected.</p>
+      <p>To select consecutive multiple numbers, click or tap the first number, then drag or swipe up or down to extend
+        the selection.</p>
+      <p>To select non-consecutive multiple numbers, hold the <strong>Ctrl</strong> key while selecting.</p>
+    </div>
+
+    <section class="section-1">
+      <select name="num1" id="num1" multiple>
+        <option value="1" selected>1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+      </select>
+      <div></div>
+      <select name="num2" id="num2" multiple>
+        <option value="1" selected>1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+      </select>
+      <div></div>
+
+      <p class="question q1"></p>
+      <p class="question">x</p>
+      <p class="question q2"></p>
+      <button class="skip-btn">Skip</button>
+    </section>
+
+    <section class="section-2">
+      <form class="answer-form">
+        <label for="answer-input">Your Answer</label>
+        <input type="number" class="answer-input" id="answer-input" max="144" min="1">
+        <button>Check</button>
+      </form>
+
+      <div class="status">
+        <p>Score: <span class="score">0</span></p>
+        <p>Mistakes: <span class="mistakes">0</span></p>
+        <button class="reset-btn">Reset</button>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>
