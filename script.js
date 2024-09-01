@@ -1,14 +1,15 @@
 const section1 = document.querySelector('.section-1')
 const num1 = document.getElementById('num1')
 const num2 = document.getElementById('num2')
+const questions = document.querySelectorAll('.question')
 const q1 = document.querySelector('.q1')
 const q2 = document.querySelector('.q2')
+const skipBtn = document.querySelector('.skip-btn')
 const answerForm = document.querySelector('.answer-form')
 const answerInput = document.querySelector('.answer-input')
 const score = document.querySelector('.score')
 const mistakes = document.querySelector('.mistakes')
 const resetBtn = document.querySelector('.reset-btn')
-const skipBtn = document.querySelector('.skip-btn')
 
 let state = {
   score: 0,
@@ -51,8 +52,14 @@ function handleSubmit(e) {
   } else {
     state.mistakes++
     mistakes.innerText = state.mistakes
-    questionEl.classList.add('animate-wrong')
-    setTimeout(() => questionEl.classList.remove('animate-wrong'), 500)
+    questions.forEach(question => {
+      question.classList.add('animate-wrong')
+    })
+    setTimeout(() => {
+      questions.forEach(question => {
+        question.classList.remove('animate-wrong')
+      })
+    }, 500)
     answerInput.value = ''
   }
 }

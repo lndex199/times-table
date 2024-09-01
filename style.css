@@ -47,11 +47,9 @@ main {
 }
 
 select {
-  all: unset;
   width: 90px;
-  height: 240px;
+  height: 206px;
   text-align: center;
-  border: 1px solid #ccc;
   outline: none;
 }
 
@@ -86,7 +84,6 @@ form label {
 
 .answer-input {
   width: 180px;
-  color: red;
   font-weight: 700;
   font-size: 34px;
   text-align: center;
@@ -95,9 +92,9 @@ form label {
   outline: none;
 }
 
+.skip-btn,
 form button,
-.reset-btn,
-.skip-btn {
+.reset-btn {
   background: #000;
   color: white;
   font-size: 15px;
@@ -126,8 +123,8 @@ form button,
   font-weight: 700;
 }
 
-.reset-btn,
-.skip-btn {
+.skip-btn,
+.reset-btn {
   border-radius: 10px;
 }
 
