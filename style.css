@@ -42,24 +42,25 @@ main {
   display: grid;
   grid-template-columns: 1fr 3fr 2fr 3fr 2fr;
   place-items: center;
-  row-gap: 10px;
+  row-gap: 50px;
   margin-top: 20px;
 }
 
 select {
+  all: unset;
   width: 90px;
-  height: 201px;
+  height: 206px;
   text-align: center;
   outline: none;
 }
 
 option {
   border: 1px solid #ccc;
-}
 
-option:checked {
-  background-color: #ffdead;
-  color: #000;
+  &:checked {
+    background-color: #ffdead;
+    color: #000;
+  }
 }
 
 .question {
