@@ -1,10 +1,16 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 body {
   width: 430px;
   font-family: sans-serif;
   margin-inline: auto;
 }
 
-h2 {
+header {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -13,19 +19,23 @@ h2 {
     display: flex;
     flex-direction: column;
     gap: 6px;
+  }
 
-    & :nth-child(1 of span) {
-      color: blue;
-    }
+  & p {
+    color: blue;
+  }
 
-    & small {
-      font-size: 14px;
-    }
+  & small {
+    font-size: 14px;
   }
 }
 
 main {
   padding-left: 20px;
+
+  &>p {
+    margin-top: 16px;
+  }
 }
 
 .section-1 {
@@ -37,8 +47,8 @@ main {
 }
 
 select {
-  width: 100px;
-  height: 230px;
+  width: 90px;
+  height: 201px;
   text-align: center;
   outline: none;
 }
